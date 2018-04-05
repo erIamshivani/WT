@@ -1,0 +1,150 @@
+<!DOCTYPE>
+<html>
+<head>
+<title>Register</title>
+
+<style>
+
+
+li {
+    float: right;
+	
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #6bd4f4;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    position: fixed;
+   
+    width: 100%;
+
+}
+
+html, body {
+           
+            
+        
+            width: 100%;
+            height: 100%;
+            max-height: 100%;
+           
+            background-image: url('regimage.jpg');
+            background-size:100% 100%;
+           
+        }
+		
+form {
+font-size:25px;
+}
+       
+            
+
+
+
+</style>
+
+
+<script>
+	function validateForm() {
+    var x = document.forms["myForm"]["pass"].value;
+    var x1 = document.forms["myForm"]["confpass"].value;
+	var ph = document.forms["myForm"]["phone"].value;
+    var len=ph.length;
+	var eid = document.forms["myForm"]["email"].value;
+    //var filter = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	var AT=eid.indexOf("@");
+	
+	//VALIDATION FOR Phone number length
+    if(len <10)
+    {
+      alert(" Enter 10-digit phone number");
+      return false;
+    }
+	
+	
+	//VALIDATION FOR Password length 
+    if(x.length <6)
+     {
+        alert("Invalid password length");
+        return false;
+    }
+	
+	
+	//VALIDATION FOR confirm Password 
+    if (x != x1) {
+        alert("Incorrect password");
+       return false;
+    }
+
+	
+    
+   
+
+	
+	
+
+}
+</script>
+
+
+</head>
+
+<body>
+
+<div>
+<center><h1 style="color:black; text-align:center; font-size:80px; font-family:Georgia">Register Here</h1><center>
+
+<nav>
+	<ul>
+		
+		
+		<li><a href="event_contact.html">Contact </a></li>
+		<li><a href="food.xml">Events </a></li>
+		
+		<li><a href="event_3.html">About us </a></li>
+
+</ul>
+</nav>
+
+
+</div>
+
+
+
+<center>
+	<form name="myForm" action="http://localhost:8080/html/serv" onsubmit="return validateForm()" method="post">
+	
+		<h3 style="color:black >
+			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspUser-Name:<input type="text" name="une" ><br><br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspUser-Name:<input type="text" name="uname" ><br><br>
+			Phone:<input type="number" name="phone" ><br><br>
+			Email:<input type="email" name="email"><br><br>
+			&nbsp&nbsp&nbsp&nbsp&nbspPassword:<input type="password" name="pass"><br><br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspConfirm-Password:<input type="password" name="confpass"><br><br>
+		</h3>
+		<input type="submit" value="Register">
+</center>
+</form>
+
+</body>
+
+
+
+
+</html>

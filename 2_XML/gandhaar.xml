@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="food.xsl"?>
+<event_menu>
+
+<event>
+	<day>Day 1</day>
+    <name>Rangoli</name>
+    <price>RS.50 per head</price>
+	<time>8:30 AM</time>
+    <rules>
+  
+  
+  Team of two is allowed.
+  Bring your own colours.
+  Time limit is 1 hour.
+  
+   </rules>
+    <Coordinator> Asmita walunj</Coordinator>
+</event>
+
+
+<event>
+    <name>Fashion Show</name>
+    <price> Free</price>
+	<time>6:30 PM</time>
+	<rules>
+  
+  Will be forwarded through email.
+  
+   </rules>
+    <Coordinator> Shivani Shinde</Coordinator>
+</event>
+
+
+
+
+
+<event>
+	<day>Day 2</day>
+    <name>Treasure hunt</name>
+    <price>Rs.50 per head</price>
+	<time>10:30 AM</time>
+    <rules>
+    Report to classroom 8.Details will be forwarded there itself.
+    </rules>
+    <Coordinator>Coordinator: Tanisha Shotriya</Coordinator>
+</event>
+
+
+<event>
+    <name>Group Dance</name>
+    <price>Rs.50 per head</price>
+	<time>10:30 AM</time>
+    <rules>
+    Submit your dance track 2 days before.Wear descent dresses.
+    </rules>
+    <Coordinator>Pooja Virani</Coordinator>
+</event>
+
+
+<event>
+	<day>Day 3</day>
+    <name>Mad Ads</name>
+    <price>Rs.50 per head</price>
+	<time>10:30 AM</time>
+    <rules>
+    Details will be forwarded at the venue itself.
+    </rules>
+    <Coordinator>Shubhangi Garnaik</Coordinator>
+</event>
+
+<event>
+    <name>Gandhaar Night</name>
+	<time>06:30 AM</time>
+    
+</event>
+
+
+</event_menu> 

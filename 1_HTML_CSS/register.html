@@ -1,0 +1,84 @@
+ <html>
+ <style>
+ fieldset{
+  border: 2px solid rgb(255,255,255);
+  width: 400px;
+	font-size:20px;
+
+margin: 20px auto;
+ }
+body {
+    background-image: url("http://www.northwichguardian.co.uk/resources/images/3236788/");
+	 background-repeat: no-repeat;
+	 background-size: cover;
+		}
+ </style>
+
+ <script> 
+ function validate() {
+    var x = document.forms["reg"]["pass"].value;
+    var y = document.forms["reg"]["passc"].value;
+    var mob = document.forms["reg"]["num"].value;
+
+    if(mob.length<10)
+    {
+    	alert("Mobile number should be 10 digits.");
+        return false;
+    }
+    
+    if(x.length<6)
+    {
+    	alert("Password should be atleast of 6 characters");
+        return false;
+    }
+
+     if (x != y) {
+        alert("Passwords do not match!");
+        return false;
+    }
+      else
+    {
+    	alert("You have successfully registered for this event. Browse through more : )");
+    	return true;
+    }
+
+}
+ </script>
+ <body>
+ 		<h1 style="color:white; text-align:center; font-size:80px; font-family:Cooper Black">Cummins Events Portal</h1>
+
+<ul>
+  <li><a class="active" href="ass1.html">Home</a></li>
+  <li><a href="event.html">Events</a></li>
+     <li><a href="details.html">Event Details</a></li>
+    <li><a href="about.html">About</a></li>
+	 <li style="float:right " ><a class="active" href="register.html">Register</a></li>
+</ul>
+
+
+ <form name="reg" action="event.html" method="post"  position="center" onsubmit="return validate()">
+ <fieldset style=" width:300" align="center"  >
+ <legend>Register here!</legend>
+	Name:<br>
+	<input type="text" name="name" required><br>
+	<br>
+	Mobile Number:<br>
+	<input type="number" name="num"  required><br>
+	<br>
+	Email-id:<br>
+	<input type="email" name="email" required><br>
+	<br>
+	Password:<br>
+	<input type="password" name="pass"  required><br>
+	<br>
+	
+	Confirm Password:<br>
+	<input type="password" name="passc" required><br>
+	<br>
+	<br>
+	<input type="submit" value="Submit" >
+ </fieldset>
+ </form>
+ </body>
+ </html>
+ 

@@ -1,0 +1,79 @@
+<html>
+<head>
+<title>PHP</title>
+<style>
+html, body {
+           
+            
+        
+            width: 100%;
+            height: 100%;
+            max-height: 100%;
+           
+            background-image: url('sample_image.jpg');
+            background-size:100% 100%;
+           
+        }
+</style>
+
+
+</head>
+   <body>      
+      <script language = "javascript" type = "text/javascript">
+         <!--
+            //Browser Support Code
+            function ajaxFunction(){
+               var ajaxRequest;  // The variable that makes Ajax possible!
+               
+               try {
+                 
+                  ajaxRequest = new XMLHttpRequest();
+               }catch (e) {
+                  // Internet Explorer Browsers
+                  try {
+                     ajaxRequest = new ActiveXObject("Msxml2.XMLHTTP");
+                  }catch (e) {
+                     try{
+                        ajaxRequest = new ActiveXObject("Microsoft.XMLHTTP");
+                     }catch (e){
+                        // Something went wrong
+                        alert("Your browser broke!");
+                        return false;
+                     }
+                  }
+               }
+                              					
+               ajaxRequest.onreadystatechange = function(){
+                  if(ajaxRequest.readyState == 4){
+                     var ajaxDisplay = document.getElementById('ajaxDiv');
+                     ajaxDisplay.innerHTML = ajaxRequest.responseText;
+                  }
+               }               
+               var username = document.getElementById('username').value;
+			   var password = document.getElementById('password').value;
+               var queryString = "?username=" + username ;
+			   queryString+= "&password="+password;
+             ajaxRequest.open("GET", "ajax-example.php" + queryString, true);
+			  
+ 
+               ajaxRequest.send(null); 
+            }        
+      </script>
+<center>	
+<font face="arial" size="4" color="red">  
+   <form name = 'myForm'>
+   <b>
+      <br><br><br><br><br><br><br><br><br><br>
+	  <h1>LOGIN FOR ACCESSING THE DETAILS</h1><br><br><br><br>
+	  User Name: <input type = 'text' id = 'username' name="username" /> <br><br>
+	  Password:&nbsp&nbsp <input type = 'password' id = 'password' name="password" /> <br><br>
+      <input type = 'button' onclick = 'ajaxFunction()' value = 'Login'/>
+   </b>	
+   </form>
+	  
+      
+      <div id = 'ajaxDiv'>Details will be displayed over here....</div>
+	  </font>
+	  <center>
+   </body>
+</html>
